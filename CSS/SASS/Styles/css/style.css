@@ -1,0 +1,54 @@
+@charset "UTF-8";
+h1, h2, h3, p, span, a, li, ul, button, div {
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 24pt;
+  text-align: center;
+  margin: 64px 0;
+}
+h1 span {
+  color: palevioletred;
+}
+h1 em {
+  font-style: normal;
+  color: deeppink;
+}
+
+h2 {
+  color: palevioletred;
+  font-size: 18pt;
+  font-style: normal;
+  text-align: left;
+  text-decoration: none;
+  margin-left: 32px;
+}
+
+li {
+  color: deeppink;
+  font-size: 16pt;
+  font-style: normal;
+  text-align: left;
+  text-decoration: none;
+  margin-left: 32px;
+  text-indent: 18px;
+  margin-top: 16px;
+  padding: 8px;
+}
+li::before {
+  content: "⇛ ";
+}
+li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+li span.blue {
+  color: blue;
+}
+li span.orange {
+  color: orange;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=style.css.map */

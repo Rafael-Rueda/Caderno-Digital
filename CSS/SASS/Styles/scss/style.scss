@@ -1,0 +1,61 @@
+//Template criado por Rafael Rueda - "https://github.com/Rafael-Rueda"
+
+// Comando para linkar o scss com a página:
+// sass --watch scss/style.scss:css/style.css
+@import '../scss/nav.scss';
+@import '../scss/header.scss';
+@import '../scss/main.scss';
+@import '../scss/footer.scss';
+
+
+h1,h2,h3,p,span,a,li,ul,button,div {
+    font-family: sans-serif;   
+}
+
+@mixin basic($cor, $tamanho) {
+    color: $cor;
+    font-size: $tamanho;
+    font-style: normal;
+    text-align: left;
+    text-decoration: none;
+    margin-left: 32px;
+}
+
+h1 {
+    font-size: 24pt;
+    text-align: center;
+    margin: 64px 0;
+    span {
+        color: palevioletred;
+    }
+    em { 
+        font-style: normal;
+        color: deeppink;
+    }
+}
+
+h2 {
+    @include basic(palevioletred, 18pt);
+}
+
+li {
+    @include basic(deeppink, 16pt);
+    text-indent: 18px;
+    margin-top: 16px;
+    padding: 8px;
+    &::before {
+        content: '\21DB \0020';
+    }
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    span.blue {
+        color: blue;
+    }
+    span.orange {
+        color: orange;
+        font-weight: 600;
+    }
+}
+

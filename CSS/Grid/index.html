@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        p {
+            color:green;
+            font-size: 24px;
+            text-shadow: 1px -1px black;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 20pt;
+        }
+        h3 {
+            font-size: 18pt;
+        }
+        h2,h3:not(h3[class]) {
+            color:darkblue;
+            text-decoration: underline;
+        }
+        ul:has(li)  {
+            padding: 0 1.5em;
+        }
+        li {
+            list-style-type: none;
+        }
+
+        li[class] {
+            margin: 1em -1.5em;
+            background-color: rgba(165, 165, 165, 0.7);
+            border: 1px solid black;
+            padding: 0 5px 5px;
+        }
+
+        .propriedade {
+            font-size: 28px;
+        }
+
+        .propriedade::before {
+            content: '\01F4D1\0020'
+        }
+
+        li ul > li {
+            list-style-type: square;
+            font-size: 24px;
+        }
+        li[class] > section {
+            left: 0;
+            color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid</h1>
+    <h2>O que é grid layout</h2>
+    <p>É um modelo de layout para web responsiva.</p>
+    <h3 class="propriedade">display: grid;</h3>
+    <p>Propriedade usada em um contâiner para torná-lo grid, onde os elementos dele podem ser rearranjados. Por padrão dispõe todos os elementos em bloco (block).</p>
+    <h3>Propriedades de disposição de elementos de um Gridbox:</h3>
+    <ul>
+        <!-- justify-content -->
+        <li class="justify-content">
+            <h3 class="propriedade">justify-content: [valor] ;</h3>
+            <p>Redistribui todo o <strong>espaçamento lateral</strong> para um grid container (cria um fluxo horizontal).</p>
+            <p>Aplicada no grid-container</p>
+            <section>
+                <h3>Valores:</h3>
+                <ul>
+                    <li><strong>start: </strong>Deixa todas as colunas de elementos no início do flex container.</li>
+                    <li><strong>end: </strong>Deixa todas as colunas de elementos no final.</li>
+                    <li><strong>center: </strong>Deixa todos os elementos no meio.</li>
+                    <li><strong>space-around: </strong>Deixa todas as colunas de elementos com um espaçamento fixo (margem) para todas elas, em ambos os lados.</li>
+                    <li><strong>space-evenly: </strong>Deixa todas as colunas de elementos com um espaçamento igual entre si.</li>
+                    <li><strong>space-between: </strong>Deixa duas das colunas de elementos no ínicio e final, e coloca as remanescentes com espaçamento igual entre si.</li>
+                </ul>
+            </section>
+            <h3 class="propriedade">justify-self: [valor];</h3>
+            <p>Altera a posição apenas de um item.</p>
+            <p>Aplicada no grid-item</p>
+        </li>
+
+        <!-- align-items -->
+        <li class="align-items">
+            <h3 class="propriedade">align-items [valor] ;</h3>
+            <p>Redistribui os elementos em relação à um eixo vertical em cada grid item.</p>
+            <p>Aplicada no grid-container</p>
+            <section>
+                <h3>Valores:</h3>
+                <ul>
+                    <li><strong>start: </strong>Dispõe todos os elementos na parte superior do seu respectivo container de grid-item.</li>
+                    <li><strong>end: </strong>Dispõe todos os elementos na parte inferior do seu respectivo container de grid-item.</li>
+                    <li><strong>center: </strong>Dispõe todos os elementos na parte central do seu respectivo container de grid-item.</li>
+                </ul>
+            </section>
+            <h3 class="propriedade">align-self: [valor];</h3>
+            <p>Altera a posição apenas de um item.</p>
+            <p>Aplicada no grid-item</p>
+        </li>
+
+        <!-- grid-template-columns -->
+        <li class="grid-template-columns">
+            <h3 class="propriedade">grid-template-columns: [valor] [valor]... ;</h3>
+            <p>Cria mais colunas para o grid-container.</p>
+            <p>Aplicada no grid-container</p>
+            <section>
+                <h3>Valores:</h3>
+                <ul>
+                    <li><strong>100px 100px 100px:</strong> Cria 3 colunas com 100px de largura cada. O grid-container terá largura do elemento com o display: grid, mas suas colunas terão 300px no total.</li>
+                    <li><strong>auto 100px: </strong>Cria 2 colunas, uma com o tamanho do elemento (auto), e outra com 100px de largura. </li>
+                </ul>
+            </section>
+        </li>
+
+        <!-- grid-template-rows -->
+        <li class="grid-template-rows">
+            <h3 class="propriedade">grid-template-rows: [valor] [valor]... ;</h3>
+            <p>Cria mais linhas para o grid-container.</p>
+            <p>Aplicada no grid-container</p>
+            <section>
+                <h3>Valores:</h3>
+                <ul>
+                    <li><strong>1fr 1fr 1fr:</strong> Cria 3 linhas com 1/3 da altura do grid container cada. </li>
+                </ul>
+                <p>Nova unidade de medida: fr (Fração). Serve também para colunas.</p>
+            </section>
+        </li>
+
+        <!--  -->
+        <li class="grid-column">
+            <h3 class="propriedade">grid-column: [grid-column-start] / [grid-column-end] ;</h3>
+            <p>Determina em que coluna o grid-item começa e termina. Útil para ocupar mais de uma coluna por item.</p>
+            <p>grid-row-start é um valor incluso</p>
+            <p>grid-row-end é um valor excluso</p>
+            <p>Aplicada no grid-item</p>
+            <p></p>
+            <section>
+                <h3>Valores:</h3>
+                <ul>
+                    <li>span 2: Substitui os dois valores da propriedade</li>
+                    <li>1 / 3: O grid-item que começa na coluna 1, termina de ser exibido na coluna 2 (Ocupa duas colunas portanto).</li>
+                </ul>
+            </section>
+        </li>
+
+        <!--  -->
+        <li class="grid-row">
+            <h3 class="propriedade">grid-row: [grid-row-start] / [grid-row-end] ;</h3>
+            <p>Determina em que linha o grid-item começa e termina. Útil para ocupar mais de uma linha por item.</p>
+            <p>grid-row-start é um valor incluso</p>
+            <p>grid-row-end é um valor excluso</p>
+            <p>Aplicada no grid-item</p>
+            
+            <p></p>
+            <section>
+                <h3>Valores:</h3>
+                <ul>
+                    <li>span 2: Substitui os dois valores da propriedade</li>
+                    <li>1 / 3: O grid-item que começa na linha 1, termina de ser exibido na linha 2 (Ocupa duas linhas portanto).</li>
+                </ul>
+            </section>
+        </li>
+
+        <!--  -->
+        <li class="gap">
+            <h3 class="propriedade">gap: [valor] ;</h3>
+            <p>Aplica um espaçamento interno entre todos os grid-items. Não aplica espaçamento nas bordas do grid-container.</p>
+            <p>Aplicada no grid-container</p>
+            <section>
+                <h3>Valores:</h3>
+                <ul>
+                    <li><strong>10px: </strong>Aplica um espaçamento de 10px entre os elementos, para linhas e colunas.</li>
+                </ul>
+            </section>
+            <h3 class="propriedade">column-gap: [valor] ;</h3>
+            <p>Aplica um espaçamento interno entre todas as colunas dos grid-items. Não aplica espaçamento nas bordas do grid-container.</p>
+            <p>Aplicada no grid-container</p>
+            <h3 class="propriedade">row-gap: [valor] ;</h3>
+            <p>Aplica um espaçamento interno entre todas as linhas dos grid-items. Não aplica espaçamento nas bordas do grid-container.</p>
+            <p>Aplicada no grid-container</p>
+        </li>
+        <li class="#">
+            <h3 class="propriedade"></h3>
+            <p></p>
+            <p>Aplicada no grid-container</p>
+            <section>
+                <h3>Valores:</h3>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </section>
+        </li>
+    </ul>
+</body>
+</html>

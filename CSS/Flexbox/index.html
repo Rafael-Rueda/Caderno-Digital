@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        p {
+            color:green;
+            font-size: 24px;
+            text-shadow: 1px -1px black;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 20pt;
+        }
+        h3 {
+            font-size: 18pt;
+        }
+        h2,h3:not(h3[class]) {
+            color:darkblue;
+            text-decoration: underline;
+        }
+        ul:has(li)  {
+            padding: 0 1.5em;
+        }
+        li {
+            list-style-type: none;
+        }
+
+        li[class] {
+            margin: 1em -1.5em;
+            background-color: rgba(165, 165, 165, 0.7);
+            border: 1px solid black;
+            padding: 0 5px 5px;
+        }
+
+        .propriedade {
+            font-size: 28px;
+        }
+
+        .propriedade::before {
+            content: '\01F4D1\0020'
+        }
+
+        li ul > li {
+            list-style-type: square;
+            font-size: 24px;
+        }
+        li[class] > section {
+            left: 0;
+            color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox</h1>
+    <h2>O que é flexbox</h2>
+    <p>É um modelo de layout para a Web responsiva.</p>
+    <h3 class="propriedade">Display: flex;</h3>
+    <p>Propriedade usada em um contêiner para transformá-lo em flex, onde os elementos dentro dele podem ser rearranjados. Por padrão dispõe todos os elementos em linha (inline).</p>
+    <h2>Propriedades de disposição de elementos de um flexbox:</h2>
+    <ul>
+<!-- Justify-content -->
+    <li class="justify-content">
+        <h3 class="propriedade">justify-content: [valor] ;</h3>
+        <p>Redistribui todo o <strong>espaçamento lateral</strong> de um flex container entre todos os seus elementos (cria um fluxo horizontal).</p>
+        <p>Aplicada no flex-container</p>
+        <section>
+        <h3>Valores:</h3>
+        <ul>
+        <li><strong>flex-start:</strong> Deixa todos os elementos no início do flex container.</li>
+        <li><strong>flex-end:</strong> Deixa todos os elementos no final.</li>
+        <li><strong>center:</strong> Deixa todos os elementos no meio.</li>
+        <li><strong>space-around:</strong> Deixa cada um dos elementos com um espaçamento (margem) fixo para todos, em ambos os lados (esquerda e direita).</li>
+        <li><strong>space-evenly:</strong> Deixa cada um dos elementos com um espaçamento igual entre si, e entre as bordas do flex container.</li>
+        <li><strong>space-between:</strong> Deixa os elementos ocuparem os espaços das extremidades direita e esquerda, centralizando depois os elementos no meio com espaçamento igual.</li>
+        </ul>
+        </section>
+        <h3 class="propriedade">justify-self: [valor] ;</h3>
+        <p>Aplicada no flex-item</p>
+        <section>
+            <h3>Valores:</h3>
+            <p>Mesmos valores.</p>
+        </section>
+    </li>
+<!-- Align-items -->
+    <li class="align-items">
+        <h3 class="propriedade">align-items: [valor] ;</h3>
+        <p>Ajusta os elementos a partir de um eixo transversal horizontal e central do flex container (cria um alinhamento vertical).</p>
+        <p>Aplicada no flex-container</p>
+        <section>
+            <h3>Valores:</h3>
+            <ul>
+                <li><strong>flex-start:</strong> Deixa os elementos no topo do flex container.</li>
+                <li><strong>flex-end:</strong> Deixa os elementos em baixo.</li>
+                <li><strong>center:</strong> Alinha os elementos no centro da linha transversal no flex container.</li>
+                <li><strong>stretch:</strong> Faz com que os elementos ocupem a altura máxima do flex container (estica-os).</li>
+                <li><strong>baseline:</strong> Alinha os elementos sobrepondo a <strong>baseline de texto</strong> dos elementos na linha transversal </li>
+            </ul>
+        </section>
+        <h3 class="propriedade">align-self: [valor] ;</h3>
+        <p>Aplicada no flex-item</p>
+        <section>
+            <h3>Valores:</h3>
+            <p>Mesmos valores.</p>
+        </section>
+    </li>
+    <li class="flex-wrap">
+        <h3 class="propriedade">flex-wrap: [valor] ;</h3>
+        <p>Quebra a linha quando a disposição dos elementos atinge o limite do flex container, dispondo os remanescentes elementos para uma próxima linha.</p>
+        <p>Aplicada no flex-container</p>
+        <section>
+            <h3>Valores:</h3>
+            <ul>
+                <li><strong>nowrap: </strong>(default) Os itens não irão para uma próxima linha no overflow.</li>
+                <li><strong>wrap: </strong>Os itens irão para uma próxima linha no overflow.</li>
+                <li><strong>wrap-reverse: </strong>Os itens irão para uma nova linha, mas está virá antes da linha atual, ou seja, "retrocedem" uma linha quando necessária a quebra. </li>
+            </ul>
+        </section>
+    </li>
+    <li class="flex-direction">
+        <h3 class="propriedade">flex-direction: [valor] ;</h3>
+        <p>Muda a direção da disposição de elementos do flex container.</p>
+        <p>Aplicada no flex-container</p>
+        <section>
+            <h3>Valores:</h3>
+            <ul>
+                <li><strong>row: </strong>(default) Os itens são dispostos em linha.</li>
+                <li><strong>column: </strong>Os itens são dispostos em coluna (inverte os eixos transversais).</li>
+                <li><strong>row-reverse: </strong>Os itens são dispostos em linha, mas começam da direita para a esquerda.</li>
+                <li><strong>column-reverse: </strong>Os itens são dispostos em coluna, mas começam de baixo pra cima.</li>
+            </ul>
+        </section>
+    </li>
+    </ul>
+</body>
+</html>

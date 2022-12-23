@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        dt {
+            font-size: 1.6em;
+            margin-top: 1em;
+        }
+        dd {
+            font-size: 1.2em;
+            color: rgb(65,65,65);
+            margin-left: 0;
+        }
+        .green {
+            color:green;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        table {
+            border-collapse: collapse;
+            width: 900px;
+        }
+        td,th {
+            background-color: rgb(24, 26, 29);
+            border: 1px solid lime;
+            padding: 5px;
+            color: limegreen;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Tags para formulários</h1>
+    <dl>
+        <dt>
+            <strong>&lt;form&gt;</strong>
+        </dt>
+        <dd>
+            <p>Tag usada para criar formulários.</p>
+            <p class="green">Propriedades:</p>
+            <table>
+                <thead>
+                <th>Atributo</th>
+                <th>Valor</th>
+                <th>Descrição</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>action</td>
+                        <td>URL</td>
+                        <td>Caminho para o qual as informações do formulário são enviadas.</td>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>"string"</td>
+                        <td>Especifica o nome do formulário.</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">target</td>
+                        <td>_self</td>
+                        <td>Mesma página</td>
+                    </tr>
+                    <tr>
+                        <td>_blank</td>
+                        <td>Nova página</td>
+                    </tr>
+                    <tr>
+                        <td>novalidate</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">autocomplete</td>
+                        <td>on</td>
+                        <td>Com autocomplete que o navegador dá ao usuário.</td>
+                    </tr>
+                    <tr>
+                        <td>off</td>
+                        <td>Sem autocomplete.</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="5">rel</td>
+                        <td>external</td>
+                        <td>Define que o link leva a um conteúdo externo.</td>
+                    </tr>
+                    <tr>
+                        <td>next</td>
+                        <td>Próxima parte do site.</td>
+                    </tr>
+                    <tr>
+                        <td>prev</td>
+                        <td>Parte anterior do site.</td>
+                    </tr>
+                    <tr>
+                        <td>search</td>
+                        <td>Define que o link é uma ferramenta de pesquisa para o site.</td>
+                    </tr>
+                    <tr>
+                        <td>nofollow</td>
+                        <td>Search spiders não seguem o link</td>
+                    </tr>
+                </tbody>
+            </table>
+        </dd>
+            <dt>
+                <strong>&lt;input&gt;</strong>
+            </dt>
+            <dd>
+                <p>Cria um campo onde o usuário pode preencher informações.</p>
+                <p class="green">Propriedades:</p>
+                <table>
+                    <thead>
+                        <th>Atributo</th>
+                        <th>Valor</th>
+                        <th>Descrição</th>
+                    </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="22">type</td>
+                                <td>button</td>
+                                <td>Botão <code><input type="button" style="height: 15px;"></code></td>
+                            </tr>
+                            <tr>
+                                <td>checkbox</td>
+                                <td>Checkbox <code><input type="checkbox"></code></td>
+                            </tr>
+                            <tr>
+                                <td>color</td>
+                                <td>Cor <code><input type="color" style="padding: 0; border-style: none; width: 25px; height: 25px; background: none; vertical-align: middle;"></code></td>
+                            </tr>
+                            <tr>
+                                <td>date</td>
+                                <td>Data <code><input type="date"></code></td>
+                            </tr>
+                            <tr>
+                                <td>datetime-local</td>
+                                <td>Data e horário <code><input type="datetime-local"></code></td>
+                            </tr>
+                            <tr>
+                                <td>email</td>
+                                <td>Email <code><input type="email"></code></td>
+                            </tr>
+                            <tr>
+                                <td>file</td>
+                                <td>Arquivo <code><input type="file"></code></td>
+                            </tr>
+                            <tr>
+                                <td>hidden</td>
+                                <td>Oculto <code><input type="hidden"></code></td>
+                            </tr>
+                            <tr>
+                                <td>image</td>
+                                <td>Botão feito de imagem <code><input type="image"></code></td>
+                            </tr>
+                            <tr>
+                                <td>month</td>
+                                <td>Mês e ano<code><input type="month"></code></td>
+                            </tr>
+                            <tr>
+                                <td>number</td>
+                                <td>Número <code><input type="number"></code></td>
+                            </tr>
+                            <tr>
+                                <td>password</td>
+                                <td>Senha <code><input type="password"></code></td>
+                            </tr>
+                            <tr>
+                                <td>radio</td>
+                                <td>Opção única<code><input type="radio"></td>
+                            </tr>
+                            <tr>
+                                <td>range</td>
+                                <td>Intervalo numérico<code><input value="95" type="range"></code></td>
+                            </tr>
+                            <tr>
+                                <td>reset</td>
+                                <td>Botão para redefinição de valores<code><input type="reset"></code></td>
+                            </tr>
+                            <tr>
+                                <td>search</td>
+                                <td>Texto usado para pesquisa<code><input type="search"></code></td>
+                            </tr>
+                            <tr>
+                                <td>submit</td>
+                                <td>Enviar formulário <code><input type="submit"></code></td>
+                            </tr>
+                            <tr>
+                                <td>tel</td>
+                                <td>Telefone <code><input type="tel"></code></td>
+                            </tr>
+                            <tr>
+                                <td>text</td>
+                                <td>Texto (padrão) <code><input type="text"></code></td>
+                            </tr>
+                            <tr>
+                                <td>time</td>
+                                <td>Horário <code><input type="time"></code></td>
+                            </tr>
+                            <tr>
+                                <td>url</td>
+                                <td>URL <code><input type="url"></code></td>
+                            </tr>
+                            <tr>
+                                <td>week</td>
+                                <td>Semana <code><input type="week"></code></td>
+                            </tr>
+                            <tr>
+                                <td>value</td>
+                                <td>* (string ou number)</td>
+                                <td>Valor que o input recebe, e transmitirá quando o formulário for enviado.</td>
+                            </tr>
+                            <tr>
+                                <td>checked</td>
+                                <td></td>
+                                <td>Pre-seleciona o valor como true para o input em que esse atributo está (checklists e radios).</td>
+                            </tr>
+                            <tr>
+                                <td>src</td>
+                                <td>URL</td>
+                                <td>Define a imagem do botão. (Apenas para o type="image").</td>
+                            </tr>
+                            <tr>
+                                <td>alt</td>
+                                <td>string</td>
+                                <td>Texto alternativo para inputs com type="image".</td>
+                            </tr>
+                            <tr>
+                                <td>form</td>
+                                <td>form_id</td>
+                                <td>Especifica qual o formulário que o input pertence.</td>
+                            </tr>
+                            <tr>
+                                <td>autofocus</td>
+                                <td></td>
+                                <td>Quando a página carrega, o input com esse valor ganha foco automaticamente.</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">accept</td>
+                                <td>media_type</td>
+                                <td>Define o media type aceito para o input de type="file". <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" rel="external" target="_blank">https://www.iana.org/assignments/media-types/media-types.xhtml</a>)</td>
+                            </tr>
+                            <tr>
+                                <td>file_extension</td>
+                                <td>Exemplo: .png ; .jpeg ; .mp4</td>
+                            </tr>
+                            <tr>
+                                <td>image/*</td>
+                                <td>Caractere " * " especifica que todos os media types estão inclusos (mas limitados à arquivos do tipo imagem nesse caso).</td>
+                            </tr>
+                            <tr>
+                                <td>min/max</td>
+                                <td>number</td>
+                                <td>Valor mínimo/máximo para inputs que suportam (type="range" por exemplo).</td>
+                            </tr>
+                            <tr>
+                                <td>minlength</td>
+                                <td>number</td>
+                                <td>Quantidade mínima/máxima de caracteres para o input.</td>
+                            </tr>
+                            <tr>
+                                <td>required</td>
+                                <td></td>
+                                <td>Informa que o campo do input é obrigatório.</td>
+                            </tr>
+                            <tr>
+                                <td>step</td>
+                                <td>number</td>
+                                <td>Especifica um valor que será a variação de um intervalo numérico,. limitando os valores possíveis (ir de 2 em 2, 3 em 3, etc).</td>
+                            </tr>
+                            <tr>
+                                <td>placeholder</td>
+                                <td>string</td>
+                                <td>Especifica um texto explicativo do input, que só é visível quando o input está vazio.</td>
+                            </tr>
+                            <tr>
+                                <td>name</td>
+                                <td>string</td>
+                                <td>Especifica o nome de um input. Apenas inputs com um nome terão os seus valores enviados ao servidor quando o formulário é preenchido.</td>
+                            </tr>
+                            <tr>
+                                <td>pattern</td>
+                                <td>regexp</td>
+                                <td>Define a estrutura dos dados a serem inseridos (por exemplo, quando uma senha deve conter pelo menos 1 caractere especial).</td>
+                            </tr>
+                        </tbody>
+                </table>
+            </dd>
+            <dt><strong>&lt;label&gt;</strong></dt>
+            <dd>
+                <p>Tag que define uma legenda para vários elementos.</p>
+                <p>Elementos que podem ser associados a um label:
+                    <ul style="padding: 0; list-style: disc inside;">
+                        <li>input</li>
+                        <li>meter</li>
+                        <li>progress</li>
+                        <li>select</li>
+                        <li>textarea</li>
+                    </ul>
+                </p>
+                <p class="green">Propriedades:</p>
+                <table>
+                    <thead>
+                        <th>Atributo</th>
+                        <th>Valor</th>
+                        <th>Descrição</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>for</td>
+                            <td>id do elemento</td>
+                            <td>Associa um label a um elemento por meio do id.</td>
+                        </tr>
+                        <tr>
+                            <td>form</td>
+                            <td>id do formulário</td>
+                            <td>Indica a que formulário o label pertence.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </dd>
+            <dt>
+                <strong>&lt;select&gt;</strong>
+            </dt>
+            <dd>
+                <p>Cria um menu de opções para seleção única (drop-down list). Não usa a tag input, mas pode ser utilizado para recolher informações do usuário em um formulário.</p>
+                <p class="green">Parâmetros:</p>
+                <table>
+                    <thead>
+                        <th>Atributo</th>
+                        <th>Valor</th>
+                        <th>Descrição</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>name</td>
+                            <td>string</td>
+                            <td>Especifica o nome do select, usado para conter seu valor no par "nome/valor" no servidor.</td>
+                        </tr>
+                        <tr>
+                            <td>disabled</td>
+                            <td></td>
+                            <td>Desativa a drop-down list.</td>
+                        </tr>
+                        <tr>
+                            <td>form</td>
+                            <td>id do formulário</td>
+                            <td>Declara a que formulário a drop-down list pertence.</td>
+                        </tr>
+                        <tr>
+                            <td>size</td>
+                            <td>number</td>
+                            <td>Define o número de opções visíveis no select.</td>
+                        </tr>
+                        <tr>
+                            <td>multiple</td>
+                            <td></td>
+                            <td>Multiplas opções podem ser selecionadas.</td>
+                        </tr>
+                        <tr>
+                            <td>autofocus</td>
+                            <td></td>
+                            <td>Quando a página carrega, o select com esse valor ganha foco automaticamente.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </dd>
+            <dt>
+                <strong>&lt;option&gt;</strong>
+            </dt>
+            <dd>
+                <p>Opção para o elemento "select"</p>
+                <p class="green">Parâmetros:</p>
+                <table>
+                    <thead>
+                        <th>Atributo</th>
+                        <th>Valor</th>
+                        <th>Descrição</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>label</td>
+                            <td>string</td>
+                            <td>Especifica uma curta descrição para a opção (nome da opção).</td>
+                        </tr>
+                        <tr>
+                            <td>disabled</td>
+                            <td></td>
+                            <td>Desativa a opção.</td>
+                        </tr>
+                        <tr>
+                            <td>selected</td>
+                            <td></td>
+                            <td>Declara uma opção pre-selecionada.</td>
+                        </tr>
+                        <tr>
+                            <td>value</td>
+                            <td>string</td>
+                            <td>Define o valor para encaminhar ao servidor.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </dd>
+            <dt>
+                <strong>&lt;fieldset&gt;</strong>
+            </dt>
+            <dd>
+                <p>Cria um agrupamentos para vários inputs dentro de um formulário.</p>
+            </dd>
+            <dt>
+                <strong>&lt;legend&gt;</strong>
+            </dt>
+            <dd>
+                <p>Dá um título/legenda para um fieldset. Pode ser declarado logo após o fieldset.</p>
+            </dd>
+    </dl>
+</body>
+</html>

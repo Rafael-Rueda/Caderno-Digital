@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcação de texto</title>
+    <style>
+        table {
+            color: green;
+            margin-left: -2em;
+            background-color: gray;
+            text-indent: 5px;
+            width:900px;
+        }
+        ul {
+            color: green;
+            margin-left: -4em;
+        }
+        td,th {
+            background-color: rgb(201, 252, 201);
+            padding: 10px;
+        }
+        td {
+            color: black;
+        }
+        dt {
+            font-size: 18pt;
+        }
+        dd > p {
+            margin-left: -2em;
+            color: rgb(65, 65, 65);
+            font-weight: bold;
+            font-size: 14pt;
+        }
+        .red {
+            color: red;
+        }
+        .blue {
+            color: blue;
+        }
+        .green {
+            color: lightgreen;
+        }
+        .ex {
+            color: gray;
+        }
+        .par {
+            color: green;
+            text-decoration: underline;
+        }
+        .dis {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tags de marcação de texto:</h1>
+    <p>
+        <dl>
+            <dt>
+                <strong>&lt;abbr&gt;</strong>
+            </dt>
+            <dd>
+                <p>Tag usada para marcar a abreviação de um termo, fornecendo sua definição por meio de um parâmetro.</p>
+                <p class="ex">Exemplo: A <span class ="blue">&lt;</span><span class="red">abbr</span> <span class="green">title</span> <span class="blue">= "Hyper-Text Markup Language"&gt;</span>HTML<span class="blue">&lt;/</span><span class="red">abbr</span><span class="blue">&gt;</span> é uma linguagem de marcação.</p>
+                <p class="dis">Display: Inline</p>
+                <p class="par">Parâmetros:</p>
+                <table>
+                    <th>Atributo</th>
+                    <th>Valor</th>
+                    <th>Descrição</th>
+                    <tr>
+                        <td>title</td>
+                        <td>"string"</td>
+                        <td>Define o significado da abreviação.</td>
+                    </tr>
+                </table>
+            </dd>
+            <br>
+            <dt>
+                <strong>&lt;dfn&gt;</strong>
+            </dt>
+            <dd>
+                <p>Definição de um termo em sua primeira ocorrência.</p>
+                <p class="ex">Exemplo: A <span class ="blue">&lt;</span><span class="red">dfn</span><span class="blue">&gt;</span>HTML<span class="blue">&lt;/</span><span class="red">dfn</span><span class="blue">&gt;</span> é uma linguagem de marcação.</p>
+                <p class="dis">Display: Inline</p>
+                <p class="par">Parâmetros:</p>
+                <ul>
+                    <li>Sem parâmetros específicos</li>
+                </ul>
+            </dd>
+            <br>
+
+            <dt>
+                <strong>&lt;bdi&gt;</strong>
+                <dd>
+                    <p>Isola termos que são impressos na direção contrária ao resto dos textos, mantendo-os em uma única direção.</p>
+                    <p class="ex">Exemplo: Trechos de escrita árabe <span class ="blue">&lt;</span><span class="red">bdi</span><span class="blue">&gt;</span>إيان<span class="blue">&lt;/</span><span class="red">bdi</span><span class="blue">&gt;</span>, que são lidos da direita para a esquerda, no meio de textos cuja escrita é ocidental, podem ser isolados, mantendo a integridade da direção do texto como um todo.</p>
+                    <p class="dis">Display: Inline</p>
+                    <p class="par">Parâmetros:</p>
+                    <ul>
+                        <li>Sem parâmetros específicos</li>
+                    </ul>
+                </dd>
+            </dt>
+            <br>
+
+            <dt>
+                <strong>&lt;bdo&gt;</strong>
+                <dd>
+                    <p>Detemina uma direção para a impressão do texto, por meio de um parâmetro.</p>
+                    <p class="ex">Exemplo: <span class ="blue">&lt;</span><span class="red">bdo</span> <span class="green">dir</span><span class="blue">="rtl"&gt;</span>O texto é impresso da direita para a esquerda<span class="blue">&lt;/</span><span class="red">bdo</span><span class="blue">&gt;</span></p>
+                    <p class="dis">Display: Inline</p>
+                    <p class="par">Parâmetros:</p>
+                    <table>
+                        <th>Atributo</th>
+                        <th>Valor</th>
+                        <th>Descrição</th>
+                        <tr>
+                            <td rowspan="2">dir</td>
+                            <td>rtl</td>
+                            <td rowspan="2">Muda a direção da impressão do texto.</td>
+                        </tr>
+                        <tr>
+                            <td>ltf</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dt>
+            <br>
+
+            <dt>
+                <strong>&lt;blockquote&gt;</strong>
+                <dd>
+                    <p>Define longas citações.  Deve ser informado de onde vem a citação por meio de um parâmetro.</p>
+                    <p class="dis">Display: Block</p>
+                    <p class="par">Parâmetros:</p>
+                    <table>
+                        <th>Atributo</th>
+                        <th>Valor</th>
+                        <th>Descrição</th>
+                        <tr>
+                            <td>cite</td>
+                            <td>"URL"</td>
+                            <td>Informa a origem/autor da citação.</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dt>
+            <br>
+
+            <dt>
+                <strong>&lt;q&gt;</strong>
+                <dd>
+                    <p>Define curtas citações.</p>
+                    <p class="dis">Display: Inline</p>
+                    <p class="par">Parâmetros:</p>
+                    <table>
+                        <th>Atributo</th>
+                        <th>Valor</th>
+                        <th>Descrição</th>
+                        <tr>
+                            <td>cite</td>
+                            <td>"URL"</td>
+                            <td>Informa a origem/autor da citação.</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dt>
+            <br>
+
+            <dt>
+                <strong>&lt;cite&gt;</strong>
+                <dd>
+                    <p>Indica uma referência de filme, livro ou artigo.</p>
+                    <p class="dis">Display: Inline</p>
+                    <p class="par">Parâmetros:</p>
+                    <ul>
+                        <li>Sem parâmetros específicos.</li>
+                    </ul>
+                </dd>
+            </dt>
+            <br>
+
+            <dt>
+                <strong>&lt;address&gt;</strong>
+                <dd>
+                    <p>Define o meio de contato com o autor da página.</p>
+                    <p class="dis">Display: Block</p>
+                    <p class="par">Parâmetros:</p>
+                    <ul>
+                        <li>Sem parâmetros específicos.</li>
+                    </ul>
+                </dd>
+            </dt>
+            <br>
+
+            <dt>
+                <strong>&lt;ins&gt;</strong>
+                <dd>
+                    <p>Mostra que o conteúdo especificado foi <ins>inserido</ins> na página.</p>
+                    <p class="dis">Display: Inline</p>
+                    <p class="par">Parâmetros:</p>
+                    <ul>
+                        <li>Sem parâmetros específicos.</li>
+                    </ul>
+                </dd>
+            </dt>
+            <br>
+
+            <dt>
+                <strong>&lt;del&gt;</strong>
+                <dd>
+                    <p>Mostra que o conteúdo especificado foi <del>removido</del> da página.</p>
+                    <p class="dis">Display: Inline</p>
+                    <p class="par">Parâmetros:</p>
+                    <ul>
+                        <li>Sem parâmetros específicos.</li>
+                    </ul>
+                </dd>
+            </dt>
+            <br>
+
+            <dt>
+                <strong>&lt;s&gt;</strong>
+                <dd>
+                    <p>Define um termo que ficou irrelevante, mas não foi excluído.</p>
+                    <p class="dis">Display: Inline</p>
+                    <p class="par">Parâmetros:</p>
+                    <ul>
+                        <li>Sem parâmetros específicos.</li>
+                    </ul>
+                </dd>
+            </dt>
+            <br>
+
+            <dt>
+                <strong>&lt;code&gt;</strong>
+                <dd>
+                    <p>Define um texto como a expressão de um código que o computador lê.</p>
+                    <p class="ex">Exemplo: A propriedade CSS <span class ="blue">&lt;</span><span class="red">code</span><span class="blue">&gt;</span>background-color<span class="blue">&lt;/</span><span class="red">code</span><span class="blue">&gt;</span> é usada para definir uma cor de fundo.</p>
+                    <p class="dis">Display: Inline</p>
+                    <p class="par">Parâmetros:</p>
+                    <ul>
+                        <li>Sem parâmetros específicos.</li>
+                    </ul>
+                </dd>
+            </dt>
+            <br>
+
+            <dt>
+                <strong>&lt;time&gt;</strong>
+                <dd>
+                    <p>Define um texto como tempo ou data específica, podendo ser horários, datas de feriados ou eventos.</p>
+                    <p class="dis">Display: Inline</p>
+                    <p class="par">Parâmetros:</p>
+                    <table>
+                        <th>Atributo</th>
+                        <th>Valor</th>
+                        <th>Descrição</th>
+                        <tr>
+                            <td>datetime</td>
+                            <td>date/time/year/month/date&time string</td>
+                            <td>Informa a data de um evento de modo de o computador consiga interpretar.</td>
+                        </tr>
+                    </table>
+                </dd>
+            </dt>
+            <br>
+
+            <dt>
+                <strong>&lt;var&gt;</strong>
+                <dd>
+                    <p>Define um texto como variável matemática ou de programa de computador.</p>
+                    <p class="dis">Display: Inline</p>
+                    <p class="par">Parâmetros:</p>
+                    <ul>
+                        <li>Sem parâmetros específicos.</li>
+                    </ul>
+                </dd>
+            </dt>
+            <br>
+
+            <dt>
+                <strong>&lt;small&gt;</strong>
+                <dd>
+                    <p>Define pequenos textos, como o comumente usado copyright.</p>
+                    <p class="dis">Display: Inline</p>
+                    <p class="par">Parâmetros:</p>
+                    <ul>
+                        <li>Sem parâmetros específicos.</li>
+                    </ul>
+                </dd>
+            </dt>
+            <br>
+
+            <dt>
+                <strong>&lt;samp&gt;</strong>
+                <dd>
+                    <p>Define um texto como mensagem/resposta do computador (output).</p>
+                    <p class="dis">Display: Inline</p>
+                    <p class="par">Parâmetros:</p>
+                    <ul>
+                        <li>Sem parâmetros específicos.</li>
+                    </ul>
+                </dd>
+            </dt>
+            <br>
+
+            <dt>
+                <strong>&lt;kbd&gt;</strong>
+                <dd>
+                    <p>Define um texto como tecla do teclado.</p>
+                    <p class="dis">Display: Inline</p>
+                    <p class="par">Parâmetros:</p>
+                    <ul>
+                        <li>Sem parâmetros específicos.</li>
+                    </ul>
+                </dd>
+            </dt>
+            <br>
+
+            <dt>
+                <strong>&lt;pre&gt;</strong>
+                <dd>
+                    <p>Mostra que o texto contido nessas tags já está preformatado, considerando espaços e quebras de linha.</p>
+                    <p class="dis">Display: Block</p>
+                    <p class="par">Parâmetros:</p>
+                    <ul>
+                        <li>Sem parâmetros específicos.</li>
+                    </ul>
+                </dd>
+            </dt>
+            <br>
+
+            <dt>
+                <strong>&lt;ruby&gt;</strong>
+                <dd>
+                    <p>Define que o texto possui uma anotação de pronuncia, escrita geralmente acima do texto em questão.</p>
+                    <p class="dis">Display: Inline</p>
+                    <p class="par">Parâmetros:</p>
+                    <ul>
+                        <li>Sem parâmetros específicos.</li>
+                    </ul>
+                </dd>
+            </dt>
+            <br>
+            <dt>
+                <strong>&lt;rt&gt;</strong>
+                <dd>
+                    <p>Define uma anotação de pronuncia. Usada dentro da tag ruby.</p>
+                    <p class="dis">Display: Inline</p>
+                    <p class="par">Parâmetros:</p>
+                    <ul>
+                        <li>Sem parâmetros específicos.</li>
+                    </ul>
+                </dd>
+            </dt>
+            <br>
+            <dt>
+                <strong>&lt;rp&gt;</strong>
+                <dd>
+                    <p>Define uma alternativa para uma anotação de pronuncia, caso o navegador não carregue-a.</p>
+                    <p class="dis">Display: Inline</p>
+                    <p class="par">Parâmetros:</p>
+                    <ul>
+                        <li>Sem parâmetros específicos.</li>
+                    </ul>
+                </dd>
+            </dt>
+            <br>
+            <dt>
+                <strong>&lt;wbr&gt;</strong>
+                <dd>
+                    <p>Define e delimita onde podem ocorrer quebras de linha nas palavras ou frases. "Agrupa palavras", previnindo-as de separar-se nas quebras de linhas.</p>
+                    <p class="dis">Display: Inline</p>
+                    <p class="par">Parâmetros:</p>
+                    <ul>
+                        <li>Sem parâmetros específicos.</li>
+                    </ul>
+                </dd>
+            </dt>
+            <br>
+        </dl>
+    </p>
+</body>
+</html>

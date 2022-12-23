@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídia</title>
+    <style>
+        dt {
+            font-size: 18pt;
+            font-weight: bold;
+        }
+        dd > p {
+            color: rgb(65,65,65);
+            font-weight: bold;
+            text-indent: -2em;
+            font-size: 16pt;
+        }
+        .pink {
+            color: deeppink;
+        }
+        .pro {
+            text-decoration: underline;
+            text-indent: -1.5em;
+        }
+        table {
+            background-color: black;
+            width: 900px;
+            margin-left:-2em;
+            margin-bottom: 2em;
+        }
+        th, td {
+            background-color:rgb(193, 238, 252);
+            font-size: 14pt;
+            padding: 10px;
+        }
+        ul {
+            font-size: 16pt;
+            margin-left: -2em;
+        }
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>&lt;figure&gt;</dt>
+        <dd>
+            <p>Define um contêiner para imagens que possuem legendas.</p>
+            <h2 class="pink pro">Propriedades:</h2>
+            <ul class="pink">
+                <li>Sem atributos específicos</li>
+            </ul>
+        </dd>
+        <dt>&lt;figcaption&gt;</dt>
+        <dd>
+            <p>Define a legenda de uma imagem.</p>
+            <h2 class="pink pro">Propriedades:</h2>
+            <ul class="pink">
+                <li>Sem atributos específicos</li>
+            </ul>
+        </dd>
+        <dt>&lt;picture&gt;</dt>
+        <dd>
+            <p>Define um contêiner para imagens com múltiplas fontes (imagens dinâmicas).</p>
+            <h2 class="pink pro">Propriedades:</h2>
+            <ul class="pink">
+                <li>Sem atributos específicos</li>
+            </ul>
+        </dd>
+        <dt>&lt;source/&gt;</dt>
+        <dd>
+            <p>Elemento vazio que define uma relação entre o documento e um arquivo externo. (Apenas usado nas mídias de áudio, vídeo e imagens dinâmicas).</p>
+            <h2 class="pink pro">Propriedades:</h2>
+            <table>
+                <th>Propriedade</th>
+                <th>Valor</th>
+                <th>Descrição</th>
+                <tr>
+                    <td rowspan="2">media</td>
+                    <td>(CSS properties)</td>
+                    <td>Especifica as propriedades referentes à janela de visualização, com prorpiedades css. (max-width: 100px)</td>
+                </tr>
+                <tr>
+                    <td>Operadores (and / , / not </td>
+                    <td>Permitem especificar mais propriedades referentes à janela de visualização.</td>
+                </tr>
+                <tr>
+                    <td>srcset</td>
+                    <td>URL</td>
+                    <td>Define o caminho para uma imagem.</td>
+                </tr>
+                <tr>
+                    <td>src</td>
+                    <td>URL</td>
+                    <td>Define o caminho para um vídeo ou áudio.</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>media_type</td>
+                    <td>Define o media type do arquivo a ser relacionado. (Valores media_type: <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" rel="external" target="_blank">https://www.iana.org/assignments/media-types/media-types.xhtml</a>)</td>
+                </tr>
+            </table>
+        </dd>
+        <dt>&lt;audio&gt;</dt>
+        <dd>
+            <p>Elemento vazio que define uma relação entre o documento e um arquivo externo.</p>
+            <h2 class="pink pro">Propriedades:</h2>
+            <table>
+                <th>Propriedade</th>
+                <th>Valor</th>
+                <th>Descrição</th>
+                <tr>
+                    <td>autoplay</td>
+                    <td></td>
+                    <td>Inicia a reprodução automaticamente. (Em alguns navegadores só acontece quando a mídia também está mutada).</td>
+                </tr>
+                <tr>
+                    <td>controls</td>
+                    <td></td>
+                    <td>Permite a visualização de controles de reprodução padrão do navegador.</td>
+                </tr>
+                <tr>
+                    <td>loop</td>
+                    <td></td>
+                    <td>Quando termina a reprodução da mídia, ela recomeça automaticamente.</td>
+                </tr>
+                <tr>
+                    <td>muted</td>
+                    <td></td>
+                    <td>Muta a saída de áudio.</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">preload</td>
+                    <td>metadata</td>
+                    <td>Carrega apenas alguns dados como nome e duração da mídia antes da página carregar.</td>
+                </tr>
+                <tr>
+                    <td>auto</td>
+                    <td>Carrega todo o arquivo automaticamente antes da página carregar.</td>
+                </tr>
+                <tr>
+                    <td>none</td>
+                    <td>Não carrega o arquivo até que se inicie a reprodução.</td>
+                </tr>
+                <tr>
+                    <td>src</td>
+                    <td>URL</td>
+                    <td>Define o caminho para o arquivo.</td>
+                </tr>
+            </table>
+        </dd>
+        <dt>&lt;video&gt;</dt>
+        <dd>
+            <p>Elemento vazio que define uma relação entre o documento e um arquivo externo.</p>
+            <h2 class="pink pro">Propriedades:</h2>
+            <table>
+                <th>Propriedade</th>
+                <th>Valor</th>
+                <th>Descrição</th>
+                <tr>
+                    <td>autoplay</td>
+                    <td></td>
+                    <td>Inicia a reprodução automaticamente. (Em alguns navegadores só acontece quando a mídia também está mutada).</td>
+                </tr>
+                <tr>
+                    <td>controls</td>
+                    <td></td>
+                    <td>Permite a visualização de controles de reprodução padrão do navegador.</td>
+                </tr>
+                <tr>
+                    <td>loop</td>
+                    <td></td>
+                    <td>Quando termina a reprodução da mídia, ela recomeça automaticamente.</td>
+                </tr>
+                <tr>
+                    <td>muted</td>
+                    <td></td>
+                    <td>Muta a saída de áudio.</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">preload</td>
+                    <td>metadata</td>
+                    <td>Carrega apenas alguns dados como nome e duração da mídia antes da página carregar.</td>
+                </tr>
+                <tr>
+                    <td>auto</td>
+                    <td>Carrega todo o arquivo automaticamente antes da página carregar.</td>
+                </tr>
+                <tr>
+                    <td>none</td>
+                    <td>Não carrega o arquivo até que se inicie a reprodução.</td>
+                </tr>
+                <tr>
+                    <td>src</td>
+                    <td>URL</td>
+                    <td>Define o caminho para o arquivo.</td>
+                </tr>
+                <tr>
+                    <td>poster</td>
+                    <td>URL</td>
+                    <td>Define a capa do vídeo (thumbnail)</td>
+                </tr>
+            </table>
+        </dd>
+       </dl>
+</body>
+</html>

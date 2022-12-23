@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        dt {
+            font-size: 18pt;
+            font-weight: bold;
+        }
+        dd > p {
+            color: rgb(65,65,65);
+            font-weight: bold;
+            text-indent: -2em;
+            font-size: 16pt;
+        }
+        .pink {
+            color: deeppink;
+        }
+        .pro {
+            text-decoration: underline;
+            text-indent: -1.5em;
+        }
+        table {
+            background-color: black;
+            width: 900px;
+            margin-left:-2em;
+            margin-bottom: 2em;
+        }
+        th, td {
+            background-color:rgb(223, 193, 252);
+            font-size: 14pt;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+   <h1 style="color:blue; font-weight: lighter;">Links são caminhos para ir de um lugar a outro na web</h1>
+   <dl>
+    <dt>&lt;a&gt;</dt>
+    <dd>
+        <p>Cria uma âncora de link</p>
+        <h2 class="pink pro">Propriedades:</h2>
+        <table>
+            <th>Propriedade</th>
+            <th>Valor</th>
+            <th>Descrição</th>
+            <tr>
+                <td rowspan="2">href</td>
+                <td>URL</td>
+                <td>Define o caminho para onde o link irá levar.</td>
+            </tr>
+            <tr>
+                <td>#</td>
+                <td>Define um caminho vazio.</td>
+            </tr>
+            <tr>
+                <td rowspan="5">rel</td>
+                <td>external</td>
+                <td>Define que o link leva a um conteúdo externo.</td>
+            </tr>
+            <tr>
+                <td>next</td>
+                <td>Próxima parte do site.</td>
+            </tr>
+            <tr>
+                <td>prev</td>
+                <td>Parte anterior do site.</td>
+            </tr>
+            <tr>
+                <td>search</td>
+                <td>Define que o link é uma ferramenta de pesquisa para o site.</td>
+            </tr>
+            <tr>
+                <td>nofollow</td>
+                <td>Search spiders não seguem o link</td>
+            </tr>
+            <tr>
+                <td>download</td>
+                <td>"String"</td>
+                <td>Define se é um link de download, e pelo valor, dá o nome do arquivo a baixar pelo usuário.</td>
+            </tr>
+            <tr>
+                <td>type</td>
+                <td>media_type</td>
+                <td>Define o media type do arquivo a ser baixado. (Valores media_type: <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" rel="external" target="_blank">https://www.iana.org/assignments/media-types/media-types.xhtml</a>)</td>''
+            </tr>
+            <tr>
+                <td rowspan="2">target</td>
+                <td>_blank</td>
+                <td>Link aberto em uma nova janela.</td>
+            </tr>
+            <tr>
+                <td>_self</td>
+                <td>Link aberto na mesma janela.</td>
+            </tr>
+        </table>
+    </dd>
+    <dt>&lt;link&gt;</dt>
+    <dd>
+        <p>Elemento vazio que define uma relação entre o documento e um arquivo externo.</p>
+        <h2 class="pink pro">Propriedades:</h2>
+        <table>
+            <th>Propriedade</th>
+            <th>Valor</th>
+            <th>Descrição</th>
+            <tr>
+                <td rowspan="2">href</td>
+                <td>URL</td>
+                <td>Define o caminho para onde o link irá levar.</td>
+            </tr>
+            <tr>
+                <td>#</td>
+                <td>Define um caminho vazio.</td>
+            </tr>
+            <tr>
+                <td rowspan="2">rel</td>
+                <td>stylesheet</td>
+                <td>Define que a relação é com um arquivo CSS</td>
+            </tr>
+            <tr>
+                <td>icon</td>
+                <td>Define que a relação é com um arquivo de ícone da página.</td>
+            </tr>
+            <tr>
+                <td>type</td>
+                <td>media_type</td>
+                <td>Define o media type do arquivo a ser relacionado. (Valores media_type: <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" rel="external" target="_blank">https://www.iana.org/assignments/media-types/media-types.xhtml</a>)</td>
+            </tr>
+        </table>
+    </dd>
+   </dl>
+</body>
+</html>

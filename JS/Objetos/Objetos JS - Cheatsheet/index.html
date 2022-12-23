@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos JS - Cheatsheet</title>
+    <style>
+        body {
+            background-color: #fdffe6;
+        }
+        ::-webkit-scrollbar {
+            width: 12px;
+            background: #e46b25;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: transparent;
+            border-left: solid 4px #fdffe6;
+            border-right: solid 4px #fdffe6;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: black;
+        }
+        h1 {
+            text-align: center;
+        }
+        p,ul,h3 {
+            text-align: justify;
+            color: #805c5c;
+            margin: 32px auto;
+            width: 80vw;
+        }
+
+        p {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        h3 {
+            font-size: 24px;
+            color: black;
+            text-decoration: underline;
+            margin-bottom: -8px;
+        }
+        ul {
+            font-size: 20px;
+            color: #772929;
+            list-style-type: square;
+            font-weight: bold;
+        }
+        em {
+            color: red;
+            font-style: normal;
+        }
+        td,th {
+            background-color: #f86e6e2c;
+            padding: 4px;
+        }
+
+        li {
+            margin-top: 4px;
+        }
+
+        li.read::after {
+            content: 'Read Only';
+            font-size: 12px;
+            vertical-align: top;
+            background-color: #ff656556;
+            padding: 3px;
+            border-radius: 8px;
+            margin-left: 8px;
+        }
+        .bck {
+            color: black;
+        }
+        .org {
+            color: #e46b25;
+        }
+    </style>
+</head>
+<body>
+    <h1>Objeto: Node (<a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Node" target="_blank">MDN</a>)</h1>
+    <p>Node é uma interface da qual diversos tipos do DOM herdam, e que permite que esses tipos sejam tratados de forma similar, por exemplo, herdando os mesmos métodos ou sendo testados da mesma forma.</p>
+    <h3>Propriedades:</h3>
+    <ul>
+        <li class="read">childNodes : <span class="bck">Retorna um <em>Objeto Nodelist</em></li>
+        <li class="read"></span>firstChild : <span class="bck">Retorna o primeiro nó filho direto do nó.</span></li>
+        <li class="read">lastChild</li>
+        <li class="read">nextSibling</li>
+        <li class="read">previousSibling</li>
+        <li class="read">parentNode</li>
+        <li class="read">parentElement</li>
+        <li class="read">nodeName : <span class="bck">Representa o nome do nó. É uma propriedade somente leitura, o que significa que não pode ser definida ou modificada.</span></li>
+        <li>nodeValue : <span class="bck">Define / Retorna o valor do nó atual</span></li>
+        <li class="read">nodeType: <span class="bck">Retorna um número que representa o tipo do nó</span></li>
+        <table>
+            <tr>
+                <th>Número</th>
+                <th>Representação</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Nó de elemento</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Nó de atributo</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Nó de texto</td>
+            </tr>
+        </table>
+    </ul>
+    <h3>Métodos:</h3>
+    <ul>
+        <li>appendChild(<span class="org">child</span>) : <span class="bck">Adiciona ao elemento pai, um nó filho específico, como seu último filho.</span> </li>
+        <li>removeChild(<span class="org">child</span>) : <span class="bck">Remove um elemento filho do documento</span></li>
+        <li>cloneNode(<span class="org">deep</span>) :<span class="bck"> Clona um nó e todo seu conteúdo.<br> <span class="org">deep = "true"</span> - Clona o nó com todo o seu conteúdo; <br> <span class="org">deep = "false"</span> - Clona apenas o nó.</span></li>
+        <li>contains(<span class="org">descendente</span>) : <span class="bck">Retorna true ou false, toda vez que o nó indicado nos parâmetros for descendente de outro.</span></li>
+        <li>hasChildNodes()</li>
+        <li>insertBefore(<span class="org">novo, referencia</span>) : <span class="bck">Insere um novo nó no elemento pai antes de outro nó na árvore DOM, referenciado nos parâmetros.</span></li>
+        <li>isEqualNode(<span class="org">el</span>) : <span class="bck">Retorna true or false, toda vez que os dados e o type de um nó coincidirem com o de outro.</span></li>
+    </ul>
+    <h1>Objeto: Nodelist (<a href="https://developer.mozilla.org/pt-BR/docs/Web/API/NodeList" target="_blank">MDN</a>)</h1>
+    <h3>Propriedades:</h3>
+    <ul>
+        <li class="read">length</li>
+    </ul>
+    <h3>Métodos:</h3>
+    <ul>
+        <li>item(index) : <span class="bck">Retorna um item de uma <em>Nodelist</em> pelo índice</span></li>
+        <li>forEach() : <span class="bck">Executa uma função uma vez para cada elemento da Nodelist.</span></li>
+    </ul>
+
+    <h1>Objeto: Element (<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element" target="_blank">MDN</a>)</h1>
+    <p>O objeto Element é um tipo de objeto Node (portanto herda as suas propriedades e métodos) que representa um elemento HTML no DOM. Ele fornece propriedades e métodos especificamente projetados para trabalhar com elementos HTML.</p>
+    <h3>Propriedades:</h3>
+    <ul>
+        <li class="read">attributes : <span class="bck">Retorna um <em>Objeto NamedNodeMap</em> contendo os atributos do elemento.</span></li>
+        <li class="read">childElementCount : <span class="bck">Retorna o número de elementos filho de um elemento.</span></li>
+        <li class="read">children : <span class="bck">Retorna o número de nós filhos de um elemento.</span></li>
+        <li>classList: <span class="bck">Retorna um <em>Objeto DOMTokenList</em> contendo uma lista com todas as classes do elemento.</span></li>
+        <li>className : <span class="bck">Retorna o valor do atributo "class" de um elemento (<em>String</em>)</span>.</li>
+        <li>id : <span class="bck">retorna o valor do atributo "id" de um elemento.</span></li>
+        <li class="read">clientHeight : <span class="bck">Retorna a altura de um elemento.</span></li>
+        <li class="read">clientWidth</li>
+        <li class="read">firstElementChild</li>
+        <li class="read">lastElementChild</li>
+        <li class="read">nextElementSibling</li>
+        <li class="read">previousElementSibling</li>
+        <li class="read">localname : <span class="bck">Representa o nome do elemento.</span></li>
+        <li class="read">scrollHeight : <span class="bck">Retorna a altura do scroll de um elemento.</span></li>
+        <li class="read">scrollWidth</li>
+        <li>scrollLeft : <span class="bck">Representa o eixo (posição) de scroll horizontal do elemento.</span></li>
+        <li>scrollTop</li>
+        <li>innerHTML : <span class="bck">Retorna / Altera a marcação HTML de um elemento.</span></li>
+        <li class="read">tagName : <span class="bck">Retorna o nome de Tag de um elemento.</span></li>
+    </ul>
+
+    <h3>Métodos:</h3>
+    <ul>
+        <li>append(<span class="org">par1, par2, ...</span>) : <span class="bck">Adiciona múltiplos nós na página, como filhos de um elemento pai.</span></li>
+        <li>addEventListener(<span class="org">'type', listener</span>) : <span class="bck">Para objetos que são <em>EventTarget</em></span><br>
+        <span class="org">type = <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">https://developer.mozilla.org/en-US/docs/Web/Events</a></span></li>
+        <li>removeEventListener(<span class="org">'type', listener</span>)</li>
+        <li>after(<span class="org">node1, node2, ...</span>) : <span class="bck">Insere um elemento logo ao final de outro.</span></li>
+        <li>before(<span class="org">node1, node2, ...</span>)</li>
+        <li>closest() : <span class="bck">Retorna o ancestral mais próximo do elemento.</span></li>
+        <li>getAttribute(<span class="org">'attr_name'</span>) : <span class="bck">Retorna o valor de um atributo</span></li>
+        <li>getAttributeNames() : <span class="bck">Retorna um <em>Objeto Array</em> com todos os nomes dos atributos de um elemento.</span></li>
+        <li>hasAttribute(<span class="org">'attr_name'</span>) : <span class="bck">Retorna True ou False, checando se um elemento tem certo atributo ou não.</span></li>
+        <li>hasAttributes() : <span class="bck">Verifica se o elemento tem algum atributo. Retorna True ou False.</span></li>
+        <li>setAttribute(<span class="org">'attr_name', value</span>)</li>
+        <li>remove() : Remove um elemento</li>
+        <li>removeAttribute(<span class="org">'attr_name'</span>)</li>
+        <li>replaceChildren(<span class="org">par1, par2, ...</span>) : <span class="bck">Substitui todos os nós filhos de um elemento, e coloca novos no lugar.</span></li>
+        <li>scroll(<span class="org">x, y</span>): <span class="bck">Define coordenadas de scroll.</span></li>
+        <li>scrollBy(<span class="org">x, y</span>) : <span class="bck">Adiciona uma quantidade de scroll.</span></li>
+        <li>scrollIntoView() : <span class="bck">Define um scroll em um elemento de modo que ele fique na tela do usuário.</span></li>
+    </ul>
+</body>
+</html>
