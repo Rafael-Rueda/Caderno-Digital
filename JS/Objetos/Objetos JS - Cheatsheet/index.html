@@ -20,6 +20,7 @@
         }
         ::-webkit-scrollbar-thumb {
             background-color: black;
+            border-radius: 16px;
         }
         h1 {
             text-align: center;
@@ -179,5 +180,51 @@
         <li>scrollBy(<span class="org">x, y</span>) : <span class="bck">Adiciona uma quantidade de scroll.</span></li>
         <li>scrollIntoView() : <span class="bck">Define um scroll em um elemento de modo que ele fique na tela do usuário.</span></li>
     </ul>
+
+    <h1>Objeto: DOMTokenList (<a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList" target="_blank">MDN</a>)</h1>
+    <h3>Propriedades:</h3>
+    <ul>
+        <li class="read">length</li>
+        <li>value</li>
+    </ul>
+    <h3>Métodos:</h3>
+    <ul>
+        <li>add()</li>
+        <li>remove()</li>
+        <li>replace()</li>
+        <li>forEach()</li>
+        <li>contains()</li>
+        <li>item(<span class="org">index</span>)</li>
+    </ul>
+    <h1>Objeto: Array (<a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">MDN</a>)</h1>
+    <h3>Propriedades:</h3>
+    <ul>
+        <li class="read">length</li>
+        <li>prototype : Permite a adição de propriedades e métodos como parte do <em>Objeto Array</em></li>
+    </ul>
+    <h3>Métodos:</h3>
+    <ul>
+        <li>isArray() : Retorna True ou False</li>
+        <li>at(<span class="org">index</span>) : <span class="bck">Retorna o valor de um item do Array pelo índice. Aceita valores negativos (contagem a partir do final, começando por -1).</span></li>
+        <li>concat(<span class="org">array2</span>) : <span class="bck">Junta dois arrays</span></li>
+        <li>every(<span class="org">função</span>) : <span class="bck">Checa se todos os itens do array satisfazem uma função, e retorna true, caso todos eles a satisfamçam.</span></li>
+        <li>some(<span class="org">função</span>) : <span class="bck">Checa se pelo menos um itenm do array satisfaz uma função, e retorna true, caso ele a satisfamça.</span></li>
+        <li>fill(<span class="org">valor, posição_inicial, posição_final</span>) : <span class="bck">Preenche (substitui) os itens de um array com um valor.</span></li>
+        <li>filter(<span class="org">função</span>) : <span class="bck">Cria um novo array apenas com os elementos que satisfazem uma função.</span></li>
+        <li>find(<span class="org">função</span>) : <span class="bck">Retorna o valor do primeiro elemento no array que satisfaz uma função.</span></li>
+        <li>findIndex(<span class="org">função</span>) : <span class="bck">Retorna o indice do primeiro elemento no array que satisfaz uma função.</span></li>
+        <li>findLast()</li>
+        <li>findLastIndex()</li>
+        <li>forEach()</li>
+        <li>includes(<span class="org">valor</span>) : <span class="bck">Retorna true ou false.</span></li>
+        <li>indexOf(<span class="org">valor, ocorrencia</span>) : <span class="bck">Retorna o index da primeira (ou desejada) ocorrência de um valor no array.</span></li>
+        <li>lastIndexOf(<span class="org">valor</span>)</li>
+        <li>push()</li>
+        <li>reverse() : <span class="bck">Inverte a ordem dos elementos do array.</span></li>
+        <li>slice(<span class="org">posição_inicial, posição_final</span>) : <span class="bck">Copia uma parte de um array e cria um novo com essa parte.</span></li>
+        <li>splice(<span class="org">index, quantidade</span>) : <span class="bck">Remove um elemento do array.</span></li>
+        <li>sort() : Altera a ordem dos elementos de um array aleatoriamente.</li>
+    </ul>
+
 </body>
 </html>
