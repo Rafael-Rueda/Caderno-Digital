@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 83.89 87.33">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1 {
+        fill: url(#Gradiente_sem_nome_25);
+      }
+
+      .cls-2 {
+        fill: url(#Gradiente_sem_nome_3);
+      }
+
+      .cls-3 {
+        fill: url(#Gradiente_sem_nome_3-2);
+      }
+
+      .cls-4 {
+        fill: url(#Gradiente_sem_nome_3-3);
+      }
+
+      .cls-5 {
+        fill: url(#Gradiente_sem_nome_3-4);
+      }
+    </style>
+    <style>
+    @keyframes mov-estrela {
+      to {
+        transform: translate(-16px, -16px) scale(1.2);
+      }
+    }
+    @keyframes mov-estrela2 {
+      to {
+        transform: translate(0px, 0px) scale(1.1);
+      }
+    }
+    @keyframes mov-estrela3 {
+      to {
+        transform: translate(-16px, -3px) scale(1.2);
+      }
+    }
+    @keyframes mov-estrela4 {
+      to {
+        transform: translate(0px, 12px) scale(1.2);
+      }
+    }
+    @keyframes mov-esfera {
+      to {
+        transform: rotateY(30deg);
+      }
+    }
+
+
+    #Esfera, #Estrelas {
+      animation: mov-esfera 2s infinite ease-in-out alternate
+    }
+    #Estrela_4 {
+      animation: mov-estrela4 2.5s infinite alternate ease-in-out
+    }
+    #Estrela_3 {
+      animation: mov-estrela3 2.5s infinite alternate ease-in-out
+    }
+    #Estrela_2 {
+      animation: mov-estrela2 2.5s infinite alternate ease-in-out
+    }
+    #Estrela_1 {
+      animation: mov-estrela 2.5s infinite alternate ease-in-out;
+    }
+    </style>
+    <radialGradient id="Gradiente_sem_nome_25" data-name="Gradiente sem nome 25" cx="41.94" cy="43.67" r="42.31" gradientUnits="userSpaceOnUse">
+      <stop offset="0.13" stop-color="#ffef26"/>
+      <stop offset="0.16" stop-color="#ffea21"/>
+      <stop offset="0.31" stop-color="#fed70f"/>
+      <stop offset="0.45" stop-color="#fdcc04"/>
+      <stop offset="0.61" stop-color="#fdc800"/>
+      <stop offset="0.85" stop-color="#f18f34"/>
+      <stop offset="1" stop-color="#e95f32"/>
+    </radialGradient>
+    <radialGradient id="Gradiente_sem_nome_3" data-name="Gradiente sem nome 3" cx="25.77" cy="23.27" r="8.78" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffef26"/>
+      <stop offset="0.02" stop-color="#ffea21"/>
+      <stop offset="0.1" stop-color="#fed70f"/>
+      <stop offset="0.19" stop-color="#fdcc04"/>
+      <stop offset="0.28" stop-color="#fdc800"/>
+      <stop offset="0.67" stop-color="#f18f34"/>
+      <stop offset="0.89" stop-color="#e95f32"/>
+      <stop offset="1" stop-color="#e3312d"/>
+    </radialGradient>
+    <radialGradient id="Gradiente_sem_nome_3-2" cx="57.4" cy="31.35" r="8.84" xlink:href="#Gradiente_sem_nome_3"/>
+    <radialGradient id="Gradiente_sem_nome_3-3" cx="24.13" cy="53.38" r="8.86" xlink:href="#Gradiente_sem_nome_3"/>
+    <radialGradient id="Gradiente_sem_nome_3-4" cx="54.86" cy="61.48" r="9.01" xlink:href="#Gradiente_sem_nome_3"/>
+  </defs>
+  <g id="Esfera">
+    <ellipse class="cls-1" cx="41.94" cy="43.67" rx="41.44" ry="43.17"/>
+  </g>
+  <g id="Estrelas">
+    <polygon id="Estrela_4" data-name="Estrela 4" class="cls-2" points="33.39 29.78 27.39 28.13 22.63 32.14 22.35 25.92 17.07 22.64 22.89 20.44 24.38 14.41 28.27 19.27 34.47 18.82 31.05 24.02 33.39 29.78"/>
+    <polygon id="Estrela_3" data-name="Estrela 3" class="cls-3" points="51.39 39.56 52.72 33.41 48.4 28.83 54.66 28.19 57.68 22.67 60.22 28.43 66.4 29.59 61.72 33.79 62.52 40.03 57.08 36.87 51.39 39.56"/>
+    <polygon id="Estrela_2" data-name="Estrela 2" class="cls-4" points="18.28 61.78 19.5 55.58 15.08 51.06 21.36 50.31 24.29 44.71 26.94 50.44 33.17 51.51 28.54 55.8 29.46 62.05 23.94 58.98 18.28 61.78"/>
+    <polygon id="Estrela_1" data-name="Estrela 1" class="cls-5" points="59.17 70.44 53.89 67.09 47.96 69.08 49.52 63.03 45.79 58.01 52.03 57.62 55.66 52.52 57.96 58.34 63.92 60.21 59.1 64.19 59.17 70.44"/>
+  </g>
+</svg>
