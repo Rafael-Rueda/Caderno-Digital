@@ -55,7 +55,7 @@
 
 
     #Esfera, #Estrelas {
-      animation: mov-esfera 2s infinite ease-in-out alternate
+      animation: mov-esfera 2.5s infinite ease-in-out alternate
     }
     #Estrela_4 {
       animation: mov-estrela4 2.5s infinite alternate ease-in-out

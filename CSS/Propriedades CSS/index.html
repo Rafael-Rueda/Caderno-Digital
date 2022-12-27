@@ -88,7 +88,7 @@
             margin-bottom: 2em;
         }
 
-        main>ul:nth-of-type(1)>li:nth-last-child(1) > span {
+        main>ul:nth-of-type(1)>li:nth-last-child(2) > span {
             font-size: 1.4em; 
             transform: translate(-30%, 0); 
             display: inline-block; 
@@ -96,7 +96,7 @@
             text-decoration: underline;
         }
         
-        main>ul:nth-of-type(1)>li:nth-last-child(1) > span::before {
+        main>ul:nth-of-type(1)>li:nth-last-child(2) > span::before {
             content: "\267B \0020";
         }
 
@@ -332,6 +332,32 @@
             </ul>
 
         </li>
+        <li style="margin-top: 30px;">
+            background-clip: 
+            <table>
+                <tr>
+                    <td>Valor</td>
+                    <td>Descrição</td>
+                </tr>
+                <tr>
+                    <td style="width:300px">-webkit-background-clip: text;</td>
+                    <td style="width:300px">O background agora é está limitado ao texto</td>
+                </tr>
+                <tr>
+                    <td>border-box</td>
+                    <td>O background agora inclui a borda</td>
+                </tr>
+                <tr>
+                    <td>padding-box</td>
+                    <td>O background não inclui a borda, mas inclui o padding</td>
+                </tr>
+                <tr>
+                    <td>content-box</td>
+                    <td>O background inclui apenas o espaço padrão do elemento.</td>
+                </tr>
+            </table>;
+        </li>
+        
     </ul>
     <h1 id="Propriedadesdebox">Propriedades de box</h1>
     <ul>

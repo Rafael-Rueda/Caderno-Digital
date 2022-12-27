@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            margin: 0;
+        }
         h1 {
             text-align: center;
             font-size: 64px;
@@ -34,12 +37,53 @@
             vertical-align: middle;
             
         }
+        main {
+            overflow: auto;
+            height: calc(100vh - 100px);
+            scroll-behavior: smooth;
+        }
+        nav {
+            display: block;
+            width: 100%;
+            height: 100px;
+            top: 0;
+            margin: 0;
+            background: repeating-linear-gradient(45deg, #0000ff65 0, #0000ff65 20px, #7fffd465 20px, #7fffd465 60px), repeating-linear-gradient(135deg, #0000ff65 0, #0000ff65 20px, #7fffd465 20px, #7fffd465 60px);
+            margin: 0;
+        }
+        nav > ul {
+            display: flex;
+            justify-content: center;
+            gap: 0 30px;
+            list-style-type: none;
+            font-weight: bold;
+            margin: 0;
+        }
+        nav > ul li {
+            background-color: aquamarine;
+            padding: 8px;
+        }
+        nav > ul li:hover {
+            cursor:pointer;
+            color: blue;
+        }
+        ul.svg table {
+            display: inline-block;
+            vertical-align: middle;
+        }
     </style>
 </head>
 <body>
+    <nav>
+        <ul id="ulnav">
+            <li>Propriedades CSS</li>
+            <li>XML: SVG</li>
+        </ul>
+    </nav>
+<main id="main">
     <h1>Animações</h1>
 
-    <h2>Propriedades CSS:</h2>
+    <h2 id="PropriedadesCSS">Propriedades CSS:</h2>
     <ul>
         <li>
     <code>
@@ -66,24 +110,149 @@
             <td>to {}</td>
             <td>top; width; background; left; etc</td>
         </tr>
+        <tr>
+            <td>0%</td>
+            <td></td>
+        </tr>
     </table>
-    <p>*Obs: Pode ser usado apenas o "<code>to {}</code>"</p>
+    <p>*Obs: Pode ser usado apenas o "<code>to {}</code> ou <code>100% {}</code> "</p>
 
         </li>
-        <li>animation: [nome do keyframe] [duração] [iteration];
+        <li><code>animation: [nome do keyframe] [duração] [iteration];</code>
             <img src="Esfera do Dragao.svg" alt="">
+            
             <ul>
-                <li>animation-name</li>
-                <li>animation-duration</li>
-                <li>animation-timing-function</li>
-                <li>animation-delay</li>
-                <li>animation-iteration-count</li>
-                <li>animation-direction</li>
-                <li>animation-fill-mode</li>
-                <li>animation-play-state</li>
+                <li>animation-name: <span><span>[Nome do keyframe];</span></span></li>
+                <li>animation-duration:<span><span>1s;</span></span></li>
+                <li>animation-timing-function: 
+                    <table>
+                        <tr>
+                            <th>function</th>
+                            <th>Descrição</th>
+                        </tr>
+                        <tr>
+                            <td>linear</td>
+                            <td rowspan="8">Curvas de velocidade para a animação</td>
+                        </tr>
+                        <tr>
+                            <td>ease</td>
+                        </tr>
+                        <tr>
+                            <td>ease-in</td>
+                        </tr>
+                        <tr>
+                            <td>ease-out</td>
+                        </tr>
+                        <tr>
+                            <td>ease-in-out</td>
+                        </tr>
+                        <tr>
+                            <td>step-start</td>
+                        </tr>
+                        <tr>
+                            <td>step-end</td>
+                        </tr>
+                        <tr>
+                            <td>cubic-bezier(x1,y1,x2,y2)</td>
+                        </tr>
+                    </table>
+                </li>
+                <li>animation-delay: <span><span>1s;</span></span></li>
+                <li>animation-iteration-count: <span><span>number / infinite;</span></span></li>
+                <li>animation-direction: <span><span>reverse / alternate / alternate-reverse;</span></span></li>
+                <li>animation-fill-mode: 
+                    <table>
+                        <tr>
+                            <th>Valor</th>
+                            <th>Descrição</th>
+                        </tr>
+                        <tr>
+                            <td>forwards</td>
+                            <td>Os estilos que permanecerão ao terminar a animação, serão os do final (ultimo keyframe).</td>
+                        </tr>
+                        <tr>
+                            <td>backwards</td>
+                            <td>Os estilos que permanecerão ao terminar a animação, serão os do início (primeiro keyframe).</td>
+                        </tr>
+                        <tr>
+                            <td>both</td>
+                            <td>Antes de começar a animação permenecerão os estilos do início, e após terminar os do final.</td>
+                        </tr>
+                    </table>
+                </li>
+                <li>animation-play-state: <span><span>running / paused;</span></span></li>
             </ul>
         </li>
     </ul>
 
+    <h2 id="XML:SVG">XML: SVG</h2>
+    <ul class="svg">
+        <li>Formas básicas SVG</li>
+        <ul>
+            <li>&lt;circle&gt;
+                <table>
+                    <tr>
+                        <th>Atributo</th>
+                    </tr>
+                    <tr>
+                        <td>cx</td>
+                    </tr>
+                    <tr>
+                        <td>cy</td>
+                    </tr>
+                    <tr>
+                        <td>stroke</td>
+                    </tr>
+                    <tr>
+                        <td>stroke-width</td>
+                    </tr>
+                    <tr>
+                        <td>fill</td>
+                    </tr>
+                    <tr>
+                        <td>stroke-dasharray</td>
+                    </tr>
+                    <tr>
+                        <td>stroke-dashoffset</td>
+                    </tr>
+                </table>
+            </li>
+
+            <li>&lt;rect&gt;
+            </li>
+
+            <li>&lt;ellipse&gt;
+            </li>
+
+            <li>&lt;line&gt;
+            </li>
+
+            <li>&lt;polygon&gt;
+            </li>
+
+            <li>&lt;polyline&gt;
+            </li>
+
+            <li>&lt;path&gt;
+            </li>
+        </ul>
+    </ul>
+</main>
+
+
+
+
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<script>
+    var links = $('ul[id="ulnav"]').children()
+    for (c = 0;c < links.length ;c++) {
+        links[c].addEventListener('click', function() {
+            var s_name = this.firstChild.nodeValue;
+            var s_el = document.getElementById(s_name.replace(/ /g, ''));
+            var s_height = $(s_el).offset().top + $(document.getElementById('main')).scrollTop();
+            $(main).scrollTop(s_height - 100);
+        })
+    }
+</script>
 </body>
 </html>
