@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expressions - Cheatsheet</title>
+    <style>
+        body {
+            background-color: rgba(95, 158, 160, 0.196);
+        }
+        ul {
+            font-size: 24px;
+        }
+        ul > ul {
+            list-style-type: square;
+        }
+        h2 {
+            color: blue;
+            text-decoration: underline;
+            font-weight: normal;
+        }
+        h2::before {
+            content: '\00BB\0020';
+        }
+    </style>
+</head>
+<body>
+    <h1>Regular Expressions - Cheatsheet</h1>
+    <h2><strong>Quantificadores:</strong> Indicam repitições para os termos.</h2>
+    <ul>
+        <li>Chaves: {}</li>
+        <ul>
+            <li>{n} - Repita n vezes.</li>
+            <li>{n,} - Repita infinitas vezes com um mínimo de n vezes.</li>
+            <li>{n, m} - Repita no mínimo n vezes e no máximo m vezes.</li>
+        </ul>
+        <li>? - Repita zero ou uma vez.</li>
+        <li>+ - Repita no mínimo uma ou infinitas vezes.</li>
+        <li>* - Repita no mínimo zero ou infinitas vezes.</li/>
+        <li>QUANTIFICADOR? - Torna um quantificador preguiçoso (Para na primeira ocorrência do termo seguinte).</li>
+    </ul>
+    <h2><strong>Classes:</strong> Indicam intervalos para os termos.</h2>
+    <ul>
+        <li>Colchetes: []</li>
+        <ul>
+            <li>[A-Z]</li>
+            <li>[a-z]</li>
+            <li>[0-9]</li>
+            <li>\w - [A-Za-z0-9_]</li>
+            <li>\d - [0-9]</li>
+            <li>\s - Espaço em branco</li>
+            <li>. - Todos os caracteres</li>
+            <li>[^TERMO] - Negação de um termo (Captura qualquer caractere menos um específico).</li>
+        </ul>
+    </ul>
+    <h2><strong>Âncoras:</strong> Indicam o posicionamento dos termos.</h2>
+    <ul>
+        <li>\b - Não pode ter algum caractere (\w) antes ou depois do termo com esse meta-char invocado.</li>
+        <li>\B - Deve ter algum caractere (\w) antes ou depois do termo com esse meta-char invocado.</li>
+        <li>^ - Posicionamento do termo no início</li>
+        <li>$ - Posicionamento do termo no Final</li>
+    </ul>
+    <h2><strong>Grupos</strong>: Extrai informações de um termo e cria um grupo separado para elas. Também serve para selecionar termos. </h2>
+    <ul>
+        <li>Parênteses: ()</li>
+        <ul>
+            <li>(?:TERMO) - (Non-Capturing group) Não cria um grupo para essa seleção, mas ela existe na REGEX.</li>
+            <li>(TERMO)? - Grupo opcional.</li>
+            <li>\NUMERO - Backreference à um grupo.</li>
+        </ul>
+    </ul>
+</body>
+</html>

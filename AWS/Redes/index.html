@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+        h1 {
+            color:darkcyan;
+            font-size: 32px;
+            text-decoration: underline;
+            margin: 0;
+            margin-top: 16px;
+        }
+        h2 {
+            display: inline-block;
+            font-size: 30px;
+            margin-top: 0;
+        }
+        p {
+            color: black;
+            font-size: 28px;
+            margin-top: 0;
+            margin-bottom: 0;
+            display: inline-block;
+            margin-left: 8px;
+        }
+
+        li {
+            margin-top: 8px;
+        }
+
+        li > p {
+            color: blue;
+            vertical-align: top;
+        }
+        .comando::after {
+            content: 'CMD';
+            background-color: rgb(0, 0, 0);
+            color: white;
+            border-radius: 8px;
+            padding: 2px;
+            font-size: 16px;
+            vertical-align: top;
+        }
+
+        .cabos_representacao {
+            margin-top: 16px;
+            min-width: 1100px;
+        }
+
+        .cabo span {
+            margin-top: 16px;
+            display: inline-block;
+            width: 300px;
+            height: 30px;
+            vertical-align: bottom;
+        }
+
+        .cabo > div {
+            margin-right: 256px;
+            font-size: 24px;
+            font-weight: bolder;
+        }
+
+       .verde {
+            background-color: green;
+        }
+
+        .verde- {
+            background: repeating-linear-gradient(45deg, white 0, white 10px, green 10px, green 20px, white 20px, white 50px);
+        }
+
+        .laranja {
+            background-color: orange;
+        }
+        .laranja- {
+            background: repeating-linear-gradient(45deg, white 0, white 10px, orange 10px, orange 20px, white 20px, white 50px);
+        }
+
+        .azul {
+            background-color: blue;
+        }
+        .azul- {
+            background: repeating-linear-gradient(45deg, white 0, white 10px, blue 10px, blue 20px, white 20px, white 50px);            
+        }
+
+        .marrom {
+            background-color: brown;
+        }
+        .marrom- {
+            background: repeating-linear-gradient(45deg, white 0, white 10px, brown 10px, brown 20px, white 20px, white 50px);
+        }
+
+        .cabo {
+            display: inline-block;
+        }
+        .cabo {
+            display: inline-block;
+        }
+
+        #img_cabos {
+            display: block;
+            margin-top: 64px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rede:</h1>
+    <p>Uma rede é uma conexão entre máquinas que trazem e levam informações entre si. Uma rede usa o protocolo de comunicação ICMP. A comunicação entre máquinas pode ser por fios ou sem fios.</p>
+    <ul>
+        <li><h2 class="comando">ping:</h2><p>Testa para ver se é possível realizar uma conexão com um servidor e retorna o tempo que leva.</p></li>
+        <li><h2>TTL:</h2><p>Número máximo de máquinas que os dados do pacote enviado (requisição) podem passar</p></li>
+        <li><h2 class="comando">tracert: </h2><p>Tracerout que informa qual o caminho de roteamento entre dois dispositivos (por quais servidores o meu pacote de dados passa).</p></li>
+        <li><h2>ICMP:</h2><p>Protocolo usado em dispositivos de rede, como roteadores.</p></li>
+        <li><h2 class="comando">nslookup:</h2><p>Traduz o endereço de um domínio e retorna o IP. Pode ser usado para saber se o serviço é direcionado para a máquina de destino.</p></li>
+    </ul>
+    <h1>Cabos:</h1>
+    <p>Uma conexão por cabos pode ser realizada entre duas máquinas (necessário <strong>crossover</strong>), ou entre várias máquinas por meio de um hub (necessária <strong>conexão direta</strong>). Os fios dos cabos seguem dois padrões: T568A e T568B. Segue um exemplo de fios entre duas máquinas, bem como o fluxo dos dados de uma para a outra: </p>
+    <section class="cabos_representacao">
+    
+    <div class="cabo">
+        <h2 style="display: block; text-indent: 32px;">T568A</h2>
+        <div>1 <span class="verde-"></span> ></div>
+        <div>2 <span class="verde"></span> ></div>
+        <div>3 <span class="laranja-"></span> <</div>
+        <div>4 <span class="azul"></span></div>
+        <div>5 <span class="azul-"></span></div>
+        <div>6 <span class="laranja"></span> <</div>
+        <div>7 <span class="marrom-"></span></div>
+        <div>8 <span class="marrom"></span></div>
+    </div>
+    
+    <div class="cabo">
+        <h2 style="display: block; text-indent: 32px;">T568B</h2>
+        <div>< <span class="laranja-"></span> 1</div>
+        <div>< <span class="laranja"></span> 2</div>
+        <div>> <span class="verde-"></span> 3</div>
+        <div>&nbsp;&nbsp; <span class="azul"></span> 4</div>
+        <div>&nbsp;&nbsp; <span class="azul-"></span> 5</div>
+        <div>> <span class="verde"></span> 6</div>
+        <div>&nbsp;&nbsp; <span class="marrom-"></span> 7</div>
+        <div>&nbsp;&nbsp; <span class="marrom"></span> 8</div>
+    </div>
+
+    </section>
+    <img id="img_cabos" src="_imagens/cabos.png" alt="cabos">
+    <h1>Hubs</h1>
+    <p>Um Hub é um equipamento que recebe várias conexões de máquinas, recebendo pacotes de cada máquina e enviando um pacote resposta para todas as máquinas conectadas, independentemente se foi requisitado ou não pela máquina (Broadcast). Por meio do HUB, podemos conectar vários dispositivos entre si, mas possui desvantagens em questões de segurança (usuário malicioso recebe os dados das outras máquinas), e desempenho (lento porque envia as respostas para todas as máquinas conectadas).</p>
+    <img id="img_cabos" src="_imagens/hub.png" alt="cabos">
+</body>
+</html>
