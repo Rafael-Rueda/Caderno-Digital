@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structured Query Language</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: bolder;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bolder;
+            text-decoration: underline;
+            color: blue;
+        }
+
+        li {
+            font-size: 22px;
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        .green {
+            color: green;
+        }
+
+        .red {
+            color: orangered;
+        }
+
+        code {
+            padding: 16px;
+            border: 2px solid black;
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.18);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Structured Query Language</h1>
+    <h2>Comandos:</h2>
+    <ul>
+        <li>
+            <h3>CREATE</h3>
+            <code>
+                <pre>
+<span class="blue">CREATE DATABASE</span> [NOME]
+                </pre>
+            </code>
+        </li>
+        <li>
+            <h3>(CREATE DATABASE) ON</h3>
+            <code>
+                <pre>
+<span class="blue">CREATE DATABASE</span> [NOME] <span class="blue">ON (</span>
+NAME = 'string'<span class="red">,</span>
+FILENAME = '\Diretorio'<span class="red">,</span>
+SIZE = '10MB'<span class="red">,</span>
+MAXSIZE = '50MB'<span class="red">,</span>
+FILEGROWTH = '5MB'
+<span class="blue">)</span>;
+                </pre>
+            </code>
+        </li>
+        <li>
+            <h3>SELECT</h3>
+            <code>
+                <pre>
+<span class="blue">SELECT</span> * <span class="blue">FROM</span> [NOME DA TABELA]
+                </pre>
+            </code>
+        </li>
+        <li>
+            <h3>TABLE</h3>
+            <code>
+                <pre>
+<span class="blue">CREATE TABLE</span> [NOME] (
+[Nome da coluna] <span class="blue">data-type</span><span class="red">,</span>
+[Nome da coluna] <span class="blue">data-type</span><span class="red">,</span>
+...
+);
+                </pre>
+            </code>
+        </li>
+        <li>
+            <h3>INSERT</h3>
+            <code>
+                <pre>
+<span class="blue">INSERT INTO</span> [NOME DA TABELA] ([NomeColuna1], [NomeColuna2], ...) <span class="blue">
+VALUES
+(</span>'registro_coluna1'<span class="red">,</span>'registro_coluna2'<span class="red">,</span> ...<span class="blue">)</span><span class="blue">,</span>
+<span class="blue">(</span>'registro2_coluna1'<span class="red">,</span>'registro2_coluna2'<span class="red">,</span> ...<span class="blue">)</span>
+                </pre>
+            </code>
+        </li>
+        <li>
+            <h3>UPDATE</h3>
+            <code>
+                <pre>
+<span class="blue">UPDATE</span> [NOME DA TABELA] <span class="blue">SET</span> [NOME DA COLUNA] = 'valor'
+                </pre>
+            </code>
+        </li>
+        <li>
+            <h3>DELETE</h3>
+            <code>
+                <pre>
+<span class="blue">DELETE FROM</span> [NOME DA TABELA] <span class="blue">WHERE</span> [Nome da coluna (id)] = 'valor'
+                </pre>
+            </code>
+        </li>
+        <li>
+            <h3>ALTER</h3>
+            <code>
+                <pre>
+<span class="blue">ALTER TABLE</span> [NOME DA TABELA] <span class="blue">ALTER COLUMN</span> [NOME DA COLUNA] <span class="red">data-type</span> NOT NULL</span>
+                </pre>
+            </code>
+        </li>
+        <li>
+            <h3>CONSTRAINT: PRIMARY KEY</h3>
+            <code>
+                <pre>
+<span class="blue">ALTER TABLE</span> [NOME DA TABELA] <span class="blue">CONSTRAINT</span> [PK_NOME_DA_COLUNA] <span class="blue">PRIMARY KEY CLUSTERED</span> ([NOME DA COLUNA])</span>
+                </pre>
+            </code>
+        </li>
+    </ul>
+</body>
+
+</html>
