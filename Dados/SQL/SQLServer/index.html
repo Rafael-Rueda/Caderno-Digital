@@ -60,6 +60,7 @@
 <span class="blue">CREATE DATABASE</span> [NOME]
                 </pre>
             </code>
+            <p>Cria um banco de dados</p>
         </li>
         <li>
             <h3>(CREATE DATABASE) ON</h3>
@@ -74,6 +75,7 @@ FILEGROWTH = '5MB'
 <span class="blue">)</span>;
                 </pre>
             </code>
+            <p>Cria um banco de dados</p>
         </li>
         <li>
             <h3>SELECT</h3>
@@ -82,6 +84,7 @@ FILEGROWTH = '5MB'
 <span class="blue">SELECT</span> * <span class="blue">FROM</span> [NOME DA TABELA]
                 </pre>
             </code>
+            <p>Seleciona e imprime as colunas especificadas juntamente com seus registros. Aceita filtros WHERE.</p>
         </li>
         <li>
             <h3>TABLE</h3>
@@ -94,6 +97,7 @@ FILEGROWTH = '5MB'
 );
                 </pre>
             </code>
+            <p>Cria uma Tabela com as colunas predefinidas</p>
         </li>
         <li>
             <h3>INSERT</h3>
@@ -105,6 +109,7 @@ VALUES
 <span class="blue">(</span>'registro2_coluna1'<span class="red">,</span>'registro2_coluna2'<span class="red">,</span> ...<span class="blue">)</span>
                 </pre>
             </code>
+            <p>Insere registros nos campos de uma tabela</p>
         </li>
         <li>
             <h3>UPDATE</h3>
@@ -113,6 +118,7 @@ VALUES
 <span class="blue">UPDATE</span> [NOME DA TABELA] <span class="blue">SET</span> [NOME DA COLUNA] = 'valor'
                 </pre>
             </code>
+            <p>Atualiza uma tabela, podendo definir novamente o valor dos registros. Aceita filtros WHERE.</p>
         </li>
         <li>
             <h3>DELETE</h3>
@@ -121,6 +127,7 @@ VALUES
 <span class="blue">DELETE FROM</span> [NOME DA TABELA] <span class="blue">WHERE</span> [Nome da coluna (id)] = 'valor'
                 </pre>
             </code>
+            <p>Apaga um registro de uma tabela. Aceita filtros WHERE.</p>
         </li>
         <li>
             <h3>ALTER</h3>
@@ -129,6 +136,18 @@ VALUES
 <span class="blue">ALTER TABLE</span> [NOME DA TABELA] <span class="blue">ALTER COLUMN</span> [NOME DA COLUNA] <span class="red">data-type</span> NOT NULL</span>
                 </pre>
             </code>
+            <p>Altera uma tabela, podendo alterar tambem o data-type da coluna.</p>
+        </li>
+        <li>
+            <h3>DROP</h3>
+            <code>
+                <pre>
+<span class="blue">ALTER TABLE</span> [NOME DA TABELA] <span class="blue">DROP COLUMN</span> [NOME DA COLUNA]
+
+<span class="blue">DROP TABLE</span> [NOME DA TABELA]
+                </pre>
+            </code>
+            <p>Exclui uma tabela ou coluna</p>
         </li>
         <li>
             <h3>CONSTRAINT: PRIMARY KEY</h3>
@@ -137,6 +156,7 @@ VALUES
 <span class="blue">ALTER TABLE</span> [NOME DA TABELA] <span class="blue">CONSTRAINT</span> [PK_NOME_DA_COLUNA] <span class="blue">PRIMARY KEY CLUSTERED</span> ([NOME DA COLUNA])</span>
                 </pre>
             </code>
+            <p>Define uma chave restrição do tipo chave-primária para uma coluna não nula de uma tabela.</p>
         </li>
     </ul>
 </body>

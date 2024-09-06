@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,29 +10,35 @@
         h2 {
             text-decoration: underline;
         }
+
         p {
             font-size: 16pt;
         }
+
         table {
             background-color: rgb(255, 123, 0);
 
         }
-        td, th {
+
+        td,
+        th {
             background-color: rgb(255, 239, 184);
             padding: 10px;
             font-size: 14pt;
         }
 
         .code {
-           background-color: #222222af;
-           display: inline-block;
-           padding: 15px;
-           border: 2px solid black;
+            background-color: #222222af;
+            display: inline-block;
+            padding: 15px;
+            border: 2px solid black;
         }
+
         p.code {
             margin-right: 10px;
             color: rgb(250, 239, 195);
         }
+
         p.result {
             vertical-align: top;
             text-decoration: underline;
@@ -41,19 +48,23 @@
             border: 2px dotted black;
             margin: 0 0;
         }
+
         code {
             color: rgb(255, 255, 255);
             font-size: 1.3em;
         }
+
         small {
             vertical-align: top;
             font-size: 16px;
         }
+
         pre {
             border-style: none !important;
         }
     </style>
 </head>
+
 <body>
     <h1>Comandos e atalhos do VSCODE:</h1>
     <table>
@@ -89,7 +100,8 @@
         </tr>
         <tr>
             <td><kbd>CTRL</kbd> + <kbd>D</kbd></td>
-            <td>Seleciona a próxima ocorrência de uma palavra selecionada. Se o cursor estiver em uma palavra, também a seleciona.</td>
+            <td>Seleciona a próxima ocorrência de uma palavra selecionada. Se o cursor estiver em uma palavra, também a
+                seleciona.</td>
             <td>Não</td>
         </tr>
         <tr>
@@ -102,11 +114,21 @@
             <td>Adiciona mais um cursor na linha de baixo.</td>
             <td>Não</td>
         </tr>
+        <tr>
+            <td><kbd>SHIFT</kbd> + <kbd>ALT</kbd> + <kbd>F</kbd></td>
+            <td>Corrige a identação automaticamente.</td>
+            <td>Não</td>
+        </tr>
+        <tr>
+            <td><kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>C</kbd></td>
+            <td>Abre o terminal na pasta em que está.</td>
+            <td>Não</td>
+        </tr>
     </table>
     <h1>EMMET: Atalhos para criar código HTML:</h1>
     <p class="code">></p>
     <div class="code">
-    <code>
+        <code>
         article.c_img>img[src="img.png" alt="Imagem"]+.container01>p{Texto qualquer}
     </code>
     </div>
@@ -131,48 +153,49 @@
         <tr>
             <th>Caractere</th>
             <th>Função</th>
-            <tr>
-                <td>"string"</td>
-                <td>Nome da tag HTML</td>
-                <tr>
-                    <td>></td>
-                    <td>Elemento filho</td>
-                    <tr>
-                        <td>[ ]</td>
-                        <td>Atributos</td>
-                        <tr>
-                            <td>+</td>
-                            <td>Elemento irmão</td>
-                            <tr>
-                                <td>{ }</td>
-                                <td>Conteúdo do elemento</td>
-                                <tr>
-                                    <td>.</td>
-                                    <td>Classe</td>
-                                    <tr>
-                                        <td>#</td>
-                                        <td>ID</td>
-                                        <tr>
-                                            <td>( )</td>
-                                            <td>Agrupa conteúdo</td>
-                                            <tr>
-                                                <td>*</td>
-                                                <td>Multiplica elementos</td>
-                                                <tr>
-                                                    <td>$</td>
-                                                    <td>Como valor, numera itens.</td>
-                                                </tr>
-                                            </tr>
-                                        </tr>
-                                    </tr>
-                                </tr>
-                            </tr>
-                        </tr>
-                    </tr>
-                </tr>
-            </tr>
+        <tr>
+            <td>"string"</td>
+            <td>Nome da tag HTML</td>
+        <tr>
+            <td>></td>
+            <td>Elemento filho</td>
+        <tr>
+            <td>[ ]</td>
+            <td>Atributos</td>
+        <tr>
+            <td>+</td>
+            <td>Elemento irmão</td>
+        <tr>
+            <td>{ }</td>
+            <td>Conteúdo do elemento</td>
+        <tr>
+            <td>.</td>
+            <td>Classe</td>
+        <tr>
+            <td>#</td>
+            <td>ID</td>
+        <tr>
+            <td>( )</td>
+            <td>Agrupa conteúdo</td>
+        <tr>
+            <td>*</td>
+            <td>Multiplica elementos</td>
+        <tr>
+            <td>$</td>
+            <td>Como valor, numera itens.</td>
+        </tr>
+        </tr>
+        </tr>
+        </tr>
+        </tr>
+        </tr>
+        </tr>
+        </tr>
+        </tr>
+        </tr>
         </tr>
     </table>
-<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 </body>
+
 </html>
